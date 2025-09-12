@@ -3,7 +3,22 @@
 > A **networked multiplayer Tetris game** built entirely with **Full Stack JavaScript**.
 > Challenge your friends, survive the falling tetriminos, and disrupt intergalactic gaming sessions 🌌👾
 
----
+
+<div align="center">
+
+![image](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXdlMjl6YzY0c3Y3NW1idTQ5eGU1dGhsaWR4eXZxZG0xa3o2cnh4cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ug60ZKqhPRnqb13qE3/giphy.gif)
+
+[![GitHub last commit](https://img.shields.io/github/last-commit/dalexhd/red-tetris?color=blue&label=Last%20commit&logo=git&maxAge=3600)](https://github.com/dalexhd/red-tetris/commits)
+[![GitHub issues](https://img.shields.io/github/issues/dalexhd/red-tetris?label=Issues&color=blue&maxAge=3600)](https://github.com/dalexhd/red-tetris/issues)
+[![GitHub forks](https://img.shields.io/github/forks/dalexhd/red-tetris?label=Forks&color=blue&maxAge=3600)](https://github.com/dalexhd/red-tetris/network)
+
+[![CI](https://github.com/dalexhd/red-tetris/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/dalexhd/red-tetris/actions/workflows/frontend-ci.yml)
+[![codecov](https://codecov.io/gh/dalexhd/red-tetris/branch/main/graph/badge.svg?token=D8A1FV32VL)](https://codecov.io/gh/dalexhd/red-tetris)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dalexhd/red-tetris?label=Code%20size&maxAge=3600)](https://github.com/dalexhd/red-tetris)
+
+</div>
+
+
 
 ## 📖 Table of Contents
 
