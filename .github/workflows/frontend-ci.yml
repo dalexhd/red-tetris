@@ -21,13 +21,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: npm
+          cache: yarn
       
       - name: Goes to frontend directory
         run: cd srcs/frontend
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       # If you use @vitest/browser or Playwright-based tests, install a browser:
       - name: Install Playwright (Chromium) + OS deps
