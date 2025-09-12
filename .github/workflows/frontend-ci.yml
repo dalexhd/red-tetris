@@ -20,6 +20,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install dependencies
+        run: pwd && ls -la
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
