@@ -9,13 +9,14 @@ concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
+defaults:
+ run:
+  working-directory: ./srcs/frontend
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Goes to frontend directory
-        run: cd ./srcs/frontend
-
       - name: Checkout
         uses: actions/checkout@v4
 
