@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   postgres:
     container_name: postgres-container
@@ -15,8 +17,8 @@ services:
 
   backend:
     build:
-      context: ./srcs/backend
-      dockerfile: Dockerfile
+      context: ./backend
+      dockerfile: Dockerfile.prod
     container_name: backend-container
     hostname: backend
     image: "backend-image"
@@ -28,15 +30,15 @@ services:
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:${POSTGRES_PORT}/${POSTGRES_DB}?schema=public
     volumes:
-      - ./srcs/backend:/app
+      - ./backend:/app
     networks:
       - red-tetris-network
     restart: always
 
   frontend:
     build:
-      context: ./srcs/frontend
-      dockerfile: Dockerfile
+      context: ./frontend
+      dockerfile: Dockerfile.prod
     container_name: frontend-container
     hostname: frontend
     image: "frontend-image"
@@ -44,7 +46,7 @@ services:
     ports:
       - ${FRONTEND_PORT}:${FRONTEND_PORT}
     volumes:
-      - ./srcs/frontend:/usr/src/frontend
+      - ./frontend:/usr/src/frontend
     environment:
       - PUBLIC_BACKEND_PORT=${BACKEND_PORT}
       - PUBLIC_BACKEND_BASE=${BACKEND_BASE}

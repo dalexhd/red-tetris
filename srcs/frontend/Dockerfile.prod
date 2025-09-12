@@ -28,4 +28,4 @@ RUN yarn run build
 EXPOSE ${FRONTEND_PORT}
 
 # default: run the dev server
-CMD ["sh", "-lc", "yarn run start:dev"]
+CMD ["sh", "-lc", "yarn run build"]
