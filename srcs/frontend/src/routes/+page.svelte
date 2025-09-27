@@ -1,14 +1,68 @@
 <script lang="ts">
-  import { Alert } from "flowbite-svelte";
+	import { online } from "svelte/reactivity/window";
+	import TetrisGame from "../components/Game.svelte";
+	import type { Game } from "../types/game";
+  let room = "default-room";
+
+  let game: Game = {
+    room: "Room 1",
+    players: [
+      {
+        name: "Player 1",
+        status: "PLAYING",
+        role: "HOST"
+      },
+      {
+        name: "Player 2",
+        status: "PLAYING",
+        role: "PLAYER"
+      }
+    ],
+    info: {
+      status: "RUNNING",
+      scores: [
+        {
+          name: "Player 1",
+          score: 1
+        },
+        {
+          name: "Player 2",
+          score: 2
+        }
+      ],
+      properties: {
+        background: "rgb(255, 255, 255)",
+        height: 20,
+        width: 10
+      }
+    }
+  } 
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<style lang="scss">
+  main {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    height: 100dvh;
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+    }
+  }
+</style>
 
-<div class="p-8">
-  <Alert>
-    <span class="font-medium">Info alert!</span>
-    <span class="test">Hello tetris :-)</span>
-  </Alert>
-</div>
+<main>
+  <div class="wrapper">
+    <div>Left sidebar</div>
+    <div class="flex gap-2 w-full justify-center">
+      <TetrisGame {game} />
+    </div>
+    <div class="flex gap-2 w-full justify-center">
+      <TetrisGame {game} />
+    </div>
+  </div>
+</main>
+
 
